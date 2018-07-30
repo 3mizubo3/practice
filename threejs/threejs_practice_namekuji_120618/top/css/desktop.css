@@ -1,0 +1,595 @@
+@charset "UTF-8";
+html, body, .gothic {
+  font-family: '游ゴシック体', '游ゴシック', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック', 'Hiragino Sans', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', 'Muli',sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Fredoka One', cursive;
+font-family: 'Baloo', cursive;
+font-family: 'Baloo Thambi', cursive;
+font-family: 'Baloo Bhai', cursive;
+font-family: 'Titan One', cursive;
+font-family: 'Monoton', cursive;
+}
+
+html {
+    box-sizing: border-box;
+    border-collapse: collapse;
+    line-height: 1;
+    font-family: sans-serif;
+}
+/*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*-----body-------*/
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #b0f6fc;
+    overflow: hidden;
+}
+.play_page {
+    background-color: #ffec84;
+  }
+.works_page {
+    background-color: #fdc1ff;
+    height: auto !important;
+    height: 100%;
+  }
+
+/*-----------------*/
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border-collapse: inherit;
+    top: 0;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+a {
+  color: inherit;
+}
+
+#title-container {
+    pointer-events: none;
+    position: absolute;
+    color: #fff;
+    line-height: 30px;
+    margin: auto;
+    text-align: center;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 300px;
+    text-rendering: geometricPrecision;
+}
+
+#title-container h1 {
+    font-size: 42px;
+    letter-spacing: 5px;
+    font-family: Fredoka One',cursive;
+}
+
+#title-container h2 {
+  font-family: 'Baloo', cursive;
+    font-size: 28px;
+    letter-spacing: 1px;
+    line-height: 50px;
+    margin-bottom: 10px;
+}
+
+#title-container p {
+        font-family: 'Baloo', cursive;
+        margin-left: 3px;
+        font-size: 15px;
+        letter-spacing: 1px;
+        line-height: 25px;
+}
+
+/*----------play button----------*/
+#playbutton {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  top: 50%;
+}
+#playbutton a {
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 30px;
+  font-size: 20px;
+  border: 1px solid #fff;
+  height: 200px;
+  width: 200px;
+  letter-spacing: 5px;
+  transition: opacity 1s;
+  font-family: 'Baloo', cursive;
+  font-weight: 100;
+  transition: opacity .5s;
+}
+#playbutton a:hover {
+  opacity: .5;
+}
+
+#playbutton a span {
+  position: absolute;
+  margin-top: -8%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(-45deg);
+  animation: sdb05 1.5s infinite;
+  box-sizing: border-box;
+}
+
+@keyframes sdb05 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+/*----------profile icon----------*/
+#prf-container-top {
+  display: block;
+  position: absolute;
+  line-height: 30px;
+  margin: auto;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 420px;
+  text-transform: uppercase;
+  text-rendering: geometricPrecision;
+}
+
+.prf-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2em;
+}
+
+.prf-container a {
+  color: RGB(150,150,150);
+  text-decoration: none;
+  margin:0 10px;
+  transition: all .3s ease-in-out;
+}
+
+.prf-container a:hover {
+  color: #fff;
+  transition: all .3s ease-in-out;
+}
+/*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*------------------------------------*/
+/*-----------------TOP----------------*/
+/*------------------------------------*/
+.svg-wrapper {
+  position: relative;
+  height: 100%;
+  width:100%;
+
+  transform: translate(25%,-10%);
+}
+.svg-wrapper svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.random_anime {
+    fill: none;
+    stroke-dasharray: 3000;
+    stroke-dashoffset: 3000;
+    animation: DASH 4s ease-in 1s forwards;
+    -webkit-animation: DASH 4s ease-in 1s forwards;
+}
+
+@keyframes DASH {
+    0% {
+        stroke-dashoffset: 3000;
+        fill: rgba(255, 255, 255, 0);
+    }
+    50% {
+        stroke-dashoffset: 2000;
+        fill: rgba(255, 255, 255, 0.2);
+    }
+    70% {
+        stroke-dashoffset: 1000;
+        fill: rgba(255, 255, 255, 0.4);
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill: rgba(255, 255, 255, 1);
+    }
+}
+
+@-webkit-keyframes DASH {
+  0% {
+      stroke-dashoffset: 3000;
+      fill: rgba(255, 255, 255, 0);
+  }
+  50% {
+      stroke-dashoffset: 2000;
+      fill: rgba(255, 255, 255, 0.2);
+  }
+  70% {
+      stroke-dashoffset: 1000;
+      fill: rgba(255, 255, 255, 0.4);
+  }
+  100% {
+      stroke-dashoffset: 0;
+      fill: rgba(255, 255, 255, 1);
+  }
+}
+
+/*---------タイトルのアニメーション-----------*/
+#title-container, #prf-container-top, #playbutton {
+  opacity: 0;
+   -webkit-animation: example 0.5s ease 0.5s 1 forwards;
+   animation: example 0.5s ease 0.5s 1 forwards;
+}
+
+@-webkit-keyframes example {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes example {
+  100% {
+    opacity: 1;
+  }
+}
+/*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*------------------------------------*/
+/*----------------ABOUT---------------*/
+/*------------------------------------*/
+.inner{
+  width: 500px;
+  height: 600px;
+  background-color: #ffdc00;
+}
+
+
+/*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*------------------------------------*/
+/*----------------PLAY---------------*/
+/*------------------------------------*/
+
+/*----------MENU-----------*/
+#nav_menu {
+  position: fixed;
+  margin: auto;
+  display: block;
+}
+/*Make this absolute positioned at the top left of the screen*/
+#menu
+{
+  width: 180px;
+  margin: -120px 0 0 -30px;
+  padding: 30px;
+  padding-top: 125px;
+  background: rgba(77,77,77,0.5);
+  list-style-type: none;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+/*--scroll menu items--*/
+#menu li
+{
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 10px 0;
+}
+#menu a {
+  color: #fff;
+  transition: opacity .5s;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  font-family: 'Baloo', cursive;
+}
+#menu a:hover {
+  opacity: .5;
+  padding: 10px 0 0 5px;
+}
+
+/*--3本のスパン--*/
+#menuToggle
+{
+  z-index: 999;
+  display: block;
+  position: fixed;
+  top: 40px;
+  left: 30px;
+  user-select: none;
+}
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+}
+#menuToggle span
+{
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin-bottom: 6px;
+  background: #fff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+/* Transform all the slices of hamburger
+ * into a crossmark.*/
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #fff;
+}
+/* But let's hide the middle one.*/
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+/* Ohyeah and the last one should go the other direction*/
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+/* And let's slide it in from the left*/
+#menuToggle input:checked ~ ul
+{
+  transition: 0.5s ease-in-out;
+  transform: none;
+}
+
+/*----------title-play-----------*/
+#title-play {
+    pointer-events: none;
+    position: absolute;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    display: block;
+    top: 0px;
+    right: 30px;
+    text-transform: uppercase;
+    text-rendering: geometricPrecision;
+}
+#title-play h1 {
+    font-size: 120px;
+    letter-spacing: 5px;
+    font-family: 'Baloo', cursive;
+    margin:20px auto;
+}
+#title-play h2 {
+    font-family: 'Baloo', cursive;
+    margin-top: -15px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+#prf-container-play {
+  display: inline-block;
+  width: 330px;
+  position: absolute;
+  line-height: 30px;
+  margin: auto;
+  text-align: center;
+  top: 160px;
+  right: 30px;
+  text-transform: uppercase;
+  text-rendering: geometricPrecision;
+}
+
+/*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+/*------------------------------------*/
+/*----------------WORKS---------------*/
+/*------------------------------------*/
+/*----------title-works-----------*/
+#prf-container-works {
+  position: fixed;
+  bottom: 0px;
+  width: 330px;
+  height: 110px;
+  right: -30px;
+  z-index: 50;
+}
+
+header {
+	  background-color:rgba(253,193,255,0.5);
+    pointer-events: none;
+    position: fixed;
+    color: #fff;
+    margin: auto;
+    display: block;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index:50;
+   transition: .3s;
+   width: 100%;
+}
+header h1 {
+    font-size: 80px;
+    letter-spacing: 5px;
+    margin: 20px auto;
+    font-family: 'Baloo', cursive;
+    text-align:center;
+    text-transform: uppercase;
+    text-rendering: geometricPrecision;
+    transition: .3s;
+}
+
+.active {
+  height: 80px;
+}
+.active h1 {
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+
+/*----------video-----------*/
+.caroussel{
+  position: realative;
+  transform: translateY(10%);
+  width: 100%;
+}
+/*親要素*/
+figure.snip1384 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;/*親要素のポジションはrelative*/
+  overflow: hidden;
+  margin: 10px auto;
+  min-width: 300px;
+  max-width: 700px;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 50px;
+  background-color: #000000;
+}
+/*親要素が囲む全部にアニメーションをきかせる*/
+figure.snip1384 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;/*ボックスの幅にpaddingやborderを含める*/
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+/*ホバー前の画像のデフォルト仕様*/
+figure.snip1384 video {
+  max-width: 100%;
+  /*backface-visibility: hidden;*/
+  vertical-align: top;
+    left: 0;
+  right: 0;
+}
+/*ホバーあとの文字キャプションのデフォルト仕様*/
+figure.snip1384:after,
+figure.snip1384 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/*ホバー前の黒背景のデフォルト仕様、デフォルトなのでopacity=0で非表示*/
+figure.snip1384:after {
+  content: '';
+  background-color: rgba(255, 255,255, 0.5);
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+/*ホバー前の文字キャプションのデフォルト使用*/
+figure.snip1384 figcaption {
+  z-index: 1;
+  padding: 40px;
+}
+/*ホバー前の文字とリンクのデフォルト仕様*/
+figure.snip1384 h3,
+figure.snip1384 .links {
+  width: 100%;
+  margin: 5px 0;
+  padding: 0;
+}
+/*ホバー前のh3文字のデフォルト仕様　opacity=0で非表示*/
+figure.snip1384 h3 {
+  line-height: 1.1em;
+  font-weight: 700;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  opacity: 0;
+}
+/*ホバー前のp文字のデフォルト仕様　opacity=0で非表示*/
+figure.snip1384 p {
+  font-size: 0.8em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 0;
+  top: 50%;
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+}
+/*ホバー前のアイコンのデフォルト仕様　opacity=0で非表示*/
+figure.snip1384 i {
+  position: absolute;
+  bottom: 10px;
+  top:80px;
+  right: 10px;
+  padding: 20px 25px;
+  font-size: 100px;
+  opacity: 0;
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+}
+/*ホバー前のaタグのデフォルト仕様*/
+figure.snip1384 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+/*ホバーあとの画像の仕様*/
+figure.snip1384:hover video {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  opacity: 0.5;
+}
+/*ホバーあとの親要素の仕様*/
+figure.snip1384:hover:after {
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+/*ホバーあとのすべてのopacityを1にして表示*/
+figure.snip1384:hover h3,
+figure.snip1384:hover p,
+figure.snip1384:hover i {
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
